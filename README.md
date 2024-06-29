@@ -2,4 +2,4 @@ A formalization of Part III of Raymond Smullyan's "To Mock a Mockingbird" into d
 
 Puzzles are given as lemmas and can be proven in Lean. Solutions provided. Get started with the puzzles by going to MockAMockingbird > src.
 
-Currently a work in progress. Only have the first problem set from Chapter 9 so far.
+Currently a work in progress. Only have the first problem set from Chapter 9 so far. The PDF of the book is also in this repository as ToMockAMockingBird.pdf
