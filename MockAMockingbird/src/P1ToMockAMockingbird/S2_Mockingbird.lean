@@ -127,10 +127,12 @@ Prove that if conditions C1 and C2 of Problem 1 hold, then
 any two birds A and B are compatible.
 -/
 
+def compatible (A B : Bird) := ∃ (x y : Bird), A ⬝ x = y ∧ B ⬝ y = x
+
 lemma compatible_birds
 (C1 : ∀ (A B : Bird), ∃ (C : Bird), is_composition C A B)
 (C2 : ∃ (M : Bird), is_mockingbird M)
-: ∀ (A B : Bird), ∃ (x y : Bird), A ⬝ x = y ∧ B ⬝ y = x := sorry
+: ∀ (A B : Bird), compatible A B := sorry
 
 -- 7 - Happy Birds
 /--

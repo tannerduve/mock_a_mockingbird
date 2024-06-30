@@ -80,10 +80,12 @@ intro x
 rw [← hE]
 apply hD
 
+def compatible (A B : Bird) := ∃ (x y : Bird), A ⬝ x = y ∧ B ⬝ y = x
+
 lemma compatible_birds
 (C1 : ∀ (A B : Bird), ∃ (C : Bird), is_composition C A B)
 (C2 : ∃ (M : Bird), is_mockingbird M)
-: ∀ (A B : Bird), ∃ (x y : Bird), A ⬝ x = y ∧ B ⬝ y = x := by
+: ∀ (A B : Bird), compatible A B := by
 intros A B
 have comp : ∃ (C : Bird), is_composition C A B := C1 A B
 cases' comp with C hC

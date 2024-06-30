@@ -1,4 +1,4 @@
-import MockAMockingbird.src.P1ToMockAMockingbird.P1Solutions.S1_MockingbirdSolutions
+import MockAMockingbird.src.P1ToMockAMockingbird.P1Solutions.S2_MockingbirdSolutions
 
 def is_hopelessly_egocentric (B : Bird) := ∀ (x : Bird), B ⬝ x = B
 
