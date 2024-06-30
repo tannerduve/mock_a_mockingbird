@@ -5,7 +5,7 @@ This project is a formalization of Parts III and IV of Raymond Smullyan's "To Mo
 This repository contains the formalization of the book content with the puzzles formalized as lemmas to be proven in Lean. Solution files are also included for reference
 
 ## Getting Started 
-To begin exploring and solving the puzzles, navigate to MockAMockingbird > src.
+To begin exploring the forest, navigate to MockAMockingbird > src.
 
 ## Progress 
 Note that this project is currently a work in progress. At present, only the first problem set from Chapter 9 has been formalized.
