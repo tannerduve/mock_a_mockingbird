@@ -1,4 +1,4 @@
-import S1_Intro
+import MockAMockingbird.src.P1ToMockAMockingbird.S1_Intro
 
 -- 1 - The Significance of the Mockingbird
 
@@ -8,7 +8,7 @@ same bird B back to you. If this happens, we say that A
 is fond of the bird B. In symbols, A is fond of B means that AB = B.
 -/
 
-def is_fond_of (A B : Bird) : Prop := A ⬝ B = B
+def is_fond_of (A B : Bird) : Prop := (A ⬝ B = B)
 
 
 /--
@@ -50,10 +50,12 @@ The problem is to prove that under the given conditions
 C1 and C2 of the last problem, at least one bird is egocentric.
 -/
 
+def is_egocentric (B : Bird) := is_fond_of B B
+
 lemma egocentric
 (C1 : ∀ (A B : Bird), ∃ (C : Bird), is_composition C A B)
 (C2 : ∃ (M : Bird), is_mockingbird M) :
- ∃ (x : Bird), is_fond_of x x := sorry
+ ∃ (x : Bird), is_egocentric x := sorry
 
 -- 3 - Story of the Agreeable Birds
 

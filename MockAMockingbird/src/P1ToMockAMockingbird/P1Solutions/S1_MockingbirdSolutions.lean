@@ -1,5 +1,4 @@
-import
-
+import MockAMockingbird.src.P1ToMockAMockingbird.S1_Intro
 
 def is_fond_of (A B : Bird) : Prop := A ⬝ B = B
 
@@ -19,14 +18,16 @@ rw [hM] at h1
 symm at h1
 use C ⬝ C
 
+def is_egocentric (B : Bird) := is_fond_of B B
+
 lemma egocentric
 (C1 : ∀ (A B : Bird), ∃ (C : Bird), is_composition C A B)
 (C2 : ∃ (M : Bird), is_mockingbird M) :
-∃ (x : Bird), is_fond_of x x := by
+ ∃ (x : Bird), is_egocentric x := by
 cases' C2 with M mockingM
 have C2 : ∃ (M : Bird), is_mockingbird M := by use M
 have Mfond : ∃ (E : Bird), is_fond_of M E := rumor1 C1 C2 M
-simp [is_fond_of]
+simp [is_egocentric, is_fond_of]
 cases' Mfond with E hE
 use E
 conv =>

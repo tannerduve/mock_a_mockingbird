@@ -11,7 +11,7 @@ A certain enchanted forest is inhabited by talking birds. Given any birds A and 
 by calling out the name of some bird to you; this bird we designate by AB. Thus AB is A's response to B. -/
 
 inductive Bird : Type
-| bird : string → Bird
+| bird : Bird
 | response : Bird → Bird → Bird
 
 -- We use the notation ⬝ so instead of writing A.response B, we write A ⬝ B
