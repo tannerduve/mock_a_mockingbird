@@ -45,7 +45,7 @@ lemma rumor2
 
 /--
 A bird x is called egocentric (sometimes narcissistic) if it is fond
-of itself-that is, if x's response to x is x. In symbols, x is egocentric if xx = x.
+of itself - that is, if x's response to x is x. In symbols, x is egocentric if xx = x.
 The problem is to prove that under the given conditions
 C1 and C2 of the last problem, at least one bird is egocentric.
 -/
@@ -152,7 +152,7 @@ We will henceforth call a bird normal if it is fond of at least
 one bird. We have just proved that every normal bird is happy.
 The converse is not necessarily true; a happy bird is not necessarily normal.
 Prove that if the composition condition C1 holds and if
-there is at' least one happy bird in the forest, then there is at
+there is at least one happy bird in the forest, then there is at
 least one normal bird.
 -/
 

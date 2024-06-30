@@ -16,8 +16,13 @@ def is_hopelessly_egocentric (B : Bird) := ∀ (x : Bird), B ⬝ x = B
 When you call out "Arthur," you get the response "Bertrand"; when you call out "Raymond," you get the response
 "Bertrand"; when you call out" Ann," you get the response
 "Bertrand." All this bird can ever think of is itselfl
-More generally, we say that a bird A isfixated on a bird B
+More generally, we say that a bird A is fixated on a bird B
 if for every bird x, Ax = B. That is, all A can think of is B!
+-/
+
+def is_fixated_on (A B : Bird) := ∀ (x : Bird), A ⬝ x = B
+
+/--
 Then a bird is hopelessly egocentric just in the case that it is
 fixated on itself.
 A bird K is called a kestrel if for any birds x and y, (Kx)y
@@ -35,3 +40,85 @@ lemma hopeless_egocentricity
 (kestrel_exists : ∃ (K : Bird), is_kestrel K) :
 ∃ (B : Bird), is_hopelessly_egocentric B := sorry
 
+-- 10 - Fixation
+
+/--
+Show that if x is fixated on y, x is fond of y
+-/
+
+lemma fixation : ∀ (x y : Bird), is_fixated_on x y → is_fond_of x y := sorry
+
+-- 11 - A Fact About Kestrels
+
+/--
+Prove that if a Kestrel is egocentric then it is hopelessly egocentric
+-/
+
+lemma kestrels : ∀ (K : Bird), is_kestrel K → is_egocentric K → is_hopelessly_egocentric K := sorry
+
+-- 12 - Another Fact About Kestrels
+
+/--
+Prove that for any kestrel K and any bird x, if Kx is egocentric then K must be fond of x.
+-/
+
+lemma kestrels2 : ∀ (K x : Bird), is_kestrel K → is_egocentric (K ⬝ x) → is_fond_of K x := sorry
+
+-- 13 - A Simple Exercise
+
+/--
+Show that if a bird A is hopelessly egocentric, then for any birds x and y, Ax = Ay
+-/
+
+lemma simple_exercise (A : Bird) : is_hopelessly_egocentric A → ∀ (x y : Bird), A ⬝ x = A ⬝ y := sorry
+
+-- 14 - Another Exercise
+
+/--
+Show that if A is hopelessly egocentric, then for any bird x and y (Ax)y = A
+-/
+
+lemma another_exercise (A : Bird) : is_hopelessly_egocentric A → ∀ (x y : Bird), (A ⬝ x) ⬝ y = A := sorry
+
+-- 15 - Hopeless Egocentricity is Contagious!
+/--
+Prove that if A is hopelessly egocentric, then for very bird
+x, the bird Ax is also hopelessly egocentric.
+-/
+
+lemma contagious (A : Bird) : is_hopelessly_egocentric A → ∀ (x : Bird), is_hopelessly_egocentric (A ⬝ x) := sorry
+
+-- 16 - Another Fact About Kestrels
+/--
+In general, it is not true that if Ax = Ay then x = y. However,
+it is true if A happens to be a kestrel K. Prove that if Kx =
+K Y then x = y. (We shall henceforth refer to this fact as the
+left cancellation law for kestrels.)
+-/
+
+lemma kestrel_left_cancellation : ∀ (K : Bird), is_kestrel K → (∀ (x y : Bird), K ⬝ x = K ⬝ y → x = y) := sorry
+
+-- 17 - A Fact About Fixation
+/--
+It is possible that a bird can be fond of more than one bird,
+but it is not possible for a bird to be fixated on more than one
+bird. Prove that it is impossible for a bird to be fixated on
+more than one bird.
+-/
+
+lemma fixation_unique : ∀ (B x y : Bird), is_fixated_on B x → is_fixated_on B y → x = y := sorry
+
+-- 18 - Another Fact About Kestrels
+/--
+Prove that for any kestrel K and any bird x, if K is fond of
+Kx, then K is fond of x.
+-/
+
+lemma fond_kestrels : ∀ (K x : Bird), is_kestrel K → is_fond_of K (K ⬝ x) → is_fond_of K x := sorry
+
+-- 19 - A Riddle
+/--
+Someone once said: "Any egocentric kestrel must be extremely lonely!" Why is this true?
+-/
+
+lemma lonely_kestrel : ∀ (K : Bird), is_kestrel K → is_egocentric K → ∀ (x : Bird), K = x := sorry
