@@ -62,12 +62,13 @@ Prove the following:
 lemma id_exercise (I : Bird) :
 is_identity I →
 (∀ (A B : Bird), compatible A B) →
-((∀ (z : Bird), is_normal z) ∧ is_agreeable I) := by
-intros idI compat
-constructor
-intro z
-unfold is_normal
-unfold is_fond_of
-unfold compatible at *
-unfold is_identity at *
-sorry
+((∀ (z : Bird), is_normal z) ∧ is_agreeable I) := sorry
+
+/--
+23 - Why?
+The identity bird I, though egocentric, is in general not hopelessly egocentric.
+Indeed, if there were a hopelessly egocentric identity bird, the situation would be quite sad. Why?
+(replace "false" with your claim)
+-/
+
+lemma sad_identity (I : Bird) (h1 : is_identity I) (h2 : is_hopelessly_egocentric I) : false := sorry

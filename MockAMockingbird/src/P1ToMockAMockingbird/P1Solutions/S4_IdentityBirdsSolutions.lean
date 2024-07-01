@@ -23,3 +23,37 @@ use x
 symm
 rw [id]
 exact Hx
+
+lemma id_exercise (I : Bird) :
+is_identity I →
+(∀ (A B : Bird), compatible A B) →
+((∀ (z : Bird), is_normal z) ∧ is_agreeable I) := by
+intros idI compat
+constructor
+intro z
+unfold is_normal
+unfold is_fond_of
+have h : ∃ x y, I ⬝ x = y ∧ z ⬝ y = x := compat I z
+cases' h with x Hx
+cases' Hx with y Hxy
+cases' Hxy with lt rt
+rw [idI] at lt
+rw [lt] at rt
+use y
+intro B
+have h : ∃ x y, I ⬝ x = y ∧ B ⬝ y = x := compat I B
+cases' h with x Hx
+cases' Hx with y Hxy
+cases' Hxy with lt rt
+rw [idI] at lt
+rw [lt] at rt
+use y
+rw [idI, rt]
+
+lemma sad_identity (I : Bird) (h1 : is_identity I) (h2 : is_hopelessly_egocentric I) :
+∀ (x : Bird), I = x := by
+intro x
+have h : I ⬝ x = I := h2 x
+symm
+rw [h1] at h
+exact h
