@@ -1,7 +1,10 @@
 # To Mock a Mockingbird in Lean
-This project is a formalization of Parts III and IV of Raymond Smullyan's "To Mock a Mockingbird" into dependent type theory via the Lean proof assistant. This book introduces the reader to the field of combinatory logic, a subject central to the foundations of programming languages and mathematics, through a series of fun puzzles about talking birds in an enchanted forest.
+This project is a formalization of Parts III and IV of Raymond Smullyan's "To Mock a Mockingbird" into dependent type theory using the Lean proof assistant. Smullyan's book introduces the reader to the field of combinatory logic—a subject central to programming languages and mathematics—through a series of engaging puzzles about talking birds in an enchanted forest.
 ## Overview 
 This repository contains the main story content of the book with the puzzles formalized as lemmas to be proven in Lean. Solution files are also included for reference
+
+## Motivation
+As I was working through this book I thought it would be interesting to try and write up some of my solutions in a proof assistant, and it occurred to me that this could be developed into something others could enjoy. The playful nature of these stories along with their rich mathematical foundations makes for a good way to bring some fun into interactive theorem proving, while also teaching users some useful concepts in logic and programming languages.
 
 ## Getting Started 
 To begin exploring the forest, navigate to MockAMockingbird > src.
