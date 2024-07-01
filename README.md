@@ -3,7 +3,7 @@ This project is a formalization of Parts III and IV of Raymond Smullyan's "To Mo
 ## Overview 
 The files in this repository contain the main prose of the book with its puzzles formalized as lemmas to be proven in Lean. Solution files are also included for reference.
 ## Motivation
-In working through this book on my own I had the idea of writing up my solutions in a proof assistant, and it occurred to me that others would likely be interested in using formal proof to solve these kinds of puzzles. In doing this project I am able to practice my own formalization skills while also providing others with an opportunity to 1) practice interactive theorem proving in a more playful/recreational setting and 2) learn some relevant theory to the study of logic and programming languages.
+While working through this book on my own I had the idea of writing up my solutions in a proof assistant, and it occurred to me that others would likely be interested in using formal proof to solve these kinds of puzzles as well. In doing this project I am able to practice my own formalization skills while also providing others with an opportunity to 1) practice interactive theorem proving in a more playful/recreational setting and 2) learn some relevant theory to the study of logic and programming languages.
 ## Getting Started 
 To begin exploring the forest, navigate to MockAMockingbird > src.
 ## Progress 
