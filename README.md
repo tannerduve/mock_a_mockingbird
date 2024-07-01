@@ -1,13 +1,13 @@
 # To Mock a Mockingbird in Lean
-This project is a formalization of Parts III and IV of Raymond Smullyan's "To Mock a Mockingbird" into dependent type theory using the Lean proof assistant. Smullyan's book introduces the reader to the field of combinatory logic—a subject central to programming languages and mathematics—through a series of engaging puzzles about talking birds in an enchanted forest.
+This project is a formalization of Parts III and IV of Raymond Smullyan's "To Mock a Mockingbird" into dependent type theory using the Lean proof assistant. This book introduces the reader to the field of combinatory logic — a subject central to the foundations of programming languages and mathematics — through a series of engaging puzzles about talking birds in an enchanted forest.
 ## Overview 
-This repository contains the main story content of the book with the puzzles formalized as lemmas to be proven in Lean. Solution files are also included for reference
+The files in this repository contain the main prose of the book with its puzzles formalized as lemmas to be proven in Lean. Solution files are also included for reference.
 ## Motivation
-As I was working through this book I thought it would be interesting to try and write up some of my solutions in a proof assistant, and it occurred to me that this could be developed into something others could enjoy. The playful nature of these stories along with their rich mathematical foundations makes for a good way to bring some fun into interactive theorem proving, while also teaching users some useful concepts in logic and programming languages, and providing good practice for those learning the Lean language.
+In working through this book on my own I had the idea of writing up my solutions in a proof assistant, and it occurred to me that others would likely be interested in using formal proof to solve these kinds of puzzles. In doing this project I am able to practice my own formalization skills while also providing others with an opportunity to 1) practice interactive theorem proving in a more playful/recreational setting and 2) learn some relevant theory to the study of logic and programming languages.
 ## Getting Started 
 To begin exploring the forest, navigate to MockAMockingbird > src.
 ## Progress 
-Note that this project is currently a work in progress. At present, only the first problem set from Chapter 9 has been formalized.
+Note that this project is currently a work in progress. At present, only Chapter 9 has been formalized.
 ## Resources 
 A PDF copy of the book, "To Mock a Mockingbird," is included in this repository and can be found as ToMockAMockingBird.pdf.
 ## Prerequisites
