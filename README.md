@@ -6,11 +6,11 @@ The files in this repository contain the main prose of the book with its puzzles
 While working through this book on my own I had the idea of writing up my solutions in a proof assistant, and it occurred to me that others would likely be interested in using formal proof to solve these kinds of puzzles as well. In doing this project I am able to practice my own formalization skills while also providing others with an opportunity to 1) practice interactive theorem proving in a more playful/recreational setting and 2) learn some relevant theory to the study of logic and programming languages.
 ## Getting Started 
 To begin exploring the forest:
-* In the folder in which you want your project to reside, run git clone https://github.com/tannerduve/mock_a_mockingbird.git
-* Run cd mock_a_mockingbird
-* Run lake exe cache get
-* Run code .
-* Navigate to MockAMockingbird > src > P1ToMockAMockingbird > S1_Intro
+* In the folder in which you want your project to reside, run ```git clone https://github.com/tannerduve/mock_a_mockingbird.git```
+* Run ```cd mock_a_mockingbird```
+* Run ```lake exe cache get```
+* Run ```code .```
+* Navigate to ```MockAMockingbird > src > P1ToMockAMockingbird > S1_Intro.lean```
 ## Progress 
 Note that this project is currently a work in progress. At present, only Chapter 9 has been formalized.
 ## Resources 
