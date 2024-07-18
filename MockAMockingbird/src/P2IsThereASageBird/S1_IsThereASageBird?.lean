@@ -67,9 +67,9 @@ bird Ax composes x with M."
 problem: This forest does contain a sage bird. "
 How did Craig know this?
 
-
 "Wonderful!" said Fowler, after Craig proved that the forest
 contained a sage bird.
+
 "And now, what are your plans? You know, perhaps, that
 this forest is only one of a whole chain of remarkable bird
 forests. You should definitely visit Curry's Forest, and before
@@ -78,10 +78,11 @@ rich in bird life. You will probably want to spend a good deal
 of time there; there is so much to learn!"
 Craig thanked Professor Fowler and departed for the next
 forest. He little realized that this was only the beginning of a
-summer-long venture!
--/
+ -/
 
 lemma sage_bird
 (C1 : ∀ (A B : Bird), ∃ (C : Bird), is_composition C A B)
-(C2 : ∃ (M : Bird), is_mockingbird M) :
-true := by rfl
+(M : Bird)
+(C2 : is_mockingbird M)
+(A : Bird)
+(Acomp : ∀ (x y : Bird), (A ⬝ x) ⬝ y = x ⬝ (M ⬝ y)) : ∃ (θ : Bird), ∀ (z : Bird), z ⬝ (θ ⬝ z) = θ ⬝ z := sorry

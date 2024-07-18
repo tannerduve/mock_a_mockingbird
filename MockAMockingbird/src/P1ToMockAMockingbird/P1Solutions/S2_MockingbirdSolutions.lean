@@ -103,8 +103,9 @@ case h.right
 
 def is_happy (A : Bird) := ∃ (x y : Bird), A ⬝ x = y ∧ A ⬝ y = x
 
-lemma happy_birds : ∀ (A : Bird) (B : Bird), is_fond_of A B → is_happy A := by
-intros A B AfondB
+lemma happy_birds : ∀ (A : Bird), (∃ (B : Bird), is_fond_of A B) → is_happy A := by
+intros A hyp
+cases' hyp with B hB
 unfold is_fond_of at *
 unfold is_happy
 use B

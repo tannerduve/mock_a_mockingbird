@@ -145,7 +145,7 @@ be a happy bird.
 
 def is_happy (A : Bird) := ∃ (x y : Bird), A ⬝ x = y ∧ A ⬝ y = x
 
-lemma happy_birds : ∀ (A : Bird) (B : Bird), is_fond_of A B → is_happy A := sorry
+lemma happy_birds : ∀ (A : Bird), (∃ (B : Bird), is_fond_of A B) → is_happy A := sorry
 
 -- 8 - Normal Birds
 
