@@ -12,7 +12,7 @@ To begin exploring the forest:
 * Run ```code .```
 * Navigate to ```MockAMockingbird > src > P1ToMockAMockingbird > S1_Intro.lean```
 ## Progress 
-Note that this project is currently a work in progress. At present, only Chapter 9 has been formalized.
+Note that this project is currently a work in progress. At present, only Chapters 9 and 10 have been formalized.
 ## Resources 
 A PDF copy of the book, "To Mock a Mockingbird," is included in this repository and can be found as ToMockAMockingBird.pdf.
 ## Prerequisites
